@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		374B363A25E68462005F1499 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374B363925E68462005F1499 /* Empty.swift */; };
+		374B369325E685A4005F1499 /* BidMachineNativeAdRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367125E685A4005F1499 /* BidMachineNativeAdRenderer.m */; };
+		374B369425E685A4005F1499 /* BidMachineNativeAdCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367225E685A4005F1499 /* BidMachineNativeAdCustomEvent.m */; };
+		374B369525E685A4005F1499 /* BidMachineInstanceMediationSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367425E685A4005F1499 /* BidMachineInstanceMediationSettings.m */; };
+		374B369625E685A4005F1499 /* BidMachineInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367525E685A4005F1499 /* BidMachineInterstitialCustomEvent.m */; };
+		374B369725E685A4005F1499 /* BidMachineAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367625E685A4005F1499 /* BidMachineAdapterConfiguration.m */; };
+		374B369825E685A4005F1499 /* BidMachineNativeAdAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367825E685A4005F1499 /* BidMachineNativeAdAdapter.m */; };
+		374B369925E685A4005F1499 /* BMMTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367B25E685A4005F1499 /* BMMTransformer.m */; };
+		374B369A25E685A4005F1499 /* BMMFactory+BMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367D25E685A4005F1499 /* BMMFactory+BMRequest.m */; };
+		374B369B25E685A4005F1499 /* BMMFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367E25E685A4005F1499 /* BMMFetcher.m */; };
+		374B369C25E685A4005F1499 /* BMMError.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B367F25E685A4005F1499 /* BMMError.m */; };
+		374B369D25E685A4005F1499 /* BMMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B368025E685A4005F1499 /* BMMUtils.m */; };
+		374B369E25E685A4005F1499 /* BMMFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B368425E685A4005F1499 /* BMMFactory.m */; };
+		374B369F25E685A4005F1499 /* BMMFactory+BMTargeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B368625E685A4005F1499 /* BMMFactory+BMTargeting.m */; };
+		374B36A025E685A4005F1499 /* BMMKeywordsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B368725E685A4005F1499 /* BMMKeywordsTransformer.m */; };
+		374B36A125E685A4005F1499 /* BidMachineBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B368D25E685A4005F1499 /* BidMachineBannerCustomEvent.m */; };
+		374B36A225E685A4005F1499 /* BidMachineRewardedVideoCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B369025E685A4005F1499 /* BidMachineRewardedVideoCustomEvent.m */; };
+		659EB60723DB2710004F4550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB60623DB2710004F4550 /* AppDelegate.m */; };
+		659EB61023DB2710004F4550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659EB60E23DB2710004F4550 /* Main.storyboard */; };
+		659EB61223DB2713004F4550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659EB61123DB2713004F4550 /* Assets.xcassets */; };
+		659EB61523DB2713004F4550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659EB61323DB2713004F4550 /* LaunchScreen.storyboard */; };
+		659EB61823DB2713004F4550 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB61723DB2713004F4550 /* main.m */; };
+		659EB65223DB2AE9004F4550 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659EB64D23DB2AE9004F4550 /* NativeAdView.xib */; };
+		659EB65323DB2AE9004F4550 /* NativeAdRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB64F23DB2AE9004F4550 /* NativeAdRenderer.m */; };
+		659EB65423DB2AE9004F4550 /* NativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB65123DB2AE9004F4550 /* NativeAdView.m */; };
+		659EB65923DB2B1E004F4550 /* BaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659EB65623DB2B1E004F4550 /* BaseView.xib */; };
+		659EB65A23DB2B1E004F4550 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB65823DB2B1E004F4550 /* Base.m */; };
+		659EB66323DB2B2F004F4550 /* Rewarded.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB65D23DB2B2E004F4550 /* Rewarded.m */; };
+		659EB66423DB2B2F004F4550 /* Interstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB65E23DB2B2E004F4550 /* Interstitial.m */; };
+		659EB66523DB2B2F004F4550 /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB65F23DB2B2F004F4550 /* Banner.m */; };
+		659EB66623DB2B2F004F4550 /* Native.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EB66023DB2B2F004F4550 /* Native.m */; };
+		ED245850F1584EB0C3FCD866 /* libPods-BidMachineSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2C9432FC7EF31129971C33 /* libPods-BidMachineSample.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1767644863B090BF2B00FC37 /* Pods-BidMachineSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidMachineSample.debug.xcconfig"; path = "Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample.debug.xcconfig"; sourceTree = "<group>"; };
+		374B363825E68461005F1499 /* BidMachineSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidMachineSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		374B363925E68462005F1499 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		374B367125E685A4005F1499 /* BidMachineNativeAdRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineNativeAdRenderer.m; sourceTree = "<group>"; };
+		374B367225E685A4005F1499 /* BidMachineNativeAdCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineNativeAdCustomEvent.m; sourceTree = "<group>"; };
+		374B367325E685A4005F1499 /* BidMachineBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineBannerCustomEvent.h; sourceTree = "<group>"; };
+		374B367425E685A4005F1499 /* BidMachineInstanceMediationSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineInstanceMediationSettings.m; sourceTree = "<group>"; };
+		374B367525E685A4005F1499 /* BidMachineInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineInterstitialCustomEvent.m; sourceTree = "<group>"; };
+		374B367625E685A4005F1499 /* BidMachineAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineAdapterConfiguration.m; sourceTree = "<group>"; };
+		374B367725E685A4005F1499 /* BidMachineRewardedVideoCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineRewardedVideoCustomEvent.h; sourceTree = "<group>"; };
+		374B367825E685A4005F1499 /* BidMachineNativeAdAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineNativeAdAdapter.m; sourceTree = "<group>"; };
+		374B367A25E685A4005F1499 /* BMMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMConstants.h; sourceTree = "<group>"; };
+		374B367B25E685A4005F1499 /* BMMTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMTransformer.m; sourceTree = "<group>"; };
+		374B367C25E685A4005F1499 /* BMMFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMFactory.h; sourceTree = "<group>"; };
+		374B367D25E685A4005F1499 /* BMMFactory+BMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BMMFactory+BMRequest.m"; sourceTree = "<group>"; };
+		374B367E25E685A4005F1499 /* BMMFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMFetcher.m; sourceTree = "<group>"; };
+		374B367F25E685A4005F1499 /* BMMError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMError.m; sourceTree = "<group>"; };
+		374B368025E685A4005F1499 /* BMMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMUtils.m; sourceTree = "<group>"; };
+		374B368125E685A4005F1499 /* BMMKeywordsTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMKeywordsTransformer.h; sourceTree = "<group>"; };
+		374B368225E685A4005F1499 /* BMMFactory+BMTargeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMMFactory+BMTargeting.h"; sourceTree = "<group>"; };
+		374B368325E685A4005F1499 /* BMMTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMTransformer.h; sourceTree = "<group>"; };
+		374B368425E685A4005F1499 /* BMMFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMFactory.m; sourceTree = "<group>"; };
+		374B368525E685A4005F1499 /* BMMFactory+BMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMMFactory+BMRequest.h"; sourceTree = "<group>"; };
+		374B368625E685A4005F1499 /* BMMFactory+BMTargeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BMMFactory+BMTargeting.m"; sourceTree = "<group>"; };
+		374B368725E685A4005F1499 /* BMMKeywordsTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMKeywordsTransformer.m; sourceTree = "<group>"; };
+		374B368825E685A4005F1499 /* BMMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMUtils.h; sourceTree = "<group>"; };
+		374B368925E685A4005F1499 /* BMMFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMFetcher.h; sourceTree = "<group>"; };
+		374B368A25E685A4005F1499 /* BMMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMError.h; sourceTree = "<group>"; };
+		374B368B25E685A4005F1499 /* BidMachineNativeAdRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineNativeAdRenderer.h; sourceTree = "<group>"; };
+		374B368C25E685A4005F1499 /* BidMachineInstanceMediationSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineInstanceMediationSettings.h; sourceTree = "<group>"; };
+		374B368D25E685A4005F1499 /* BidMachineBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineBannerCustomEvent.m; sourceTree = "<group>"; };
+		374B368E25E685A4005F1499 /* BidMachineNativeAdCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineNativeAdCustomEvent.h; sourceTree = "<group>"; };
+		374B368F25E685A4005F1499 /* BidMachineNativeAdAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineNativeAdAdapter.h; sourceTree = "<group>"; };
+		374B369025E685A4005F1499 /* BidMachineRewardedVideoCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineRewardedVideoCustomEvent.m; sourceTree = "<group>"; };
+		374B369125E685A4005F1499 /* BidMachineAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineAdapterConfiguration.h; sourceTree = "<group>"; };
+		374B369225E685A4005F1499 /* BidMachineInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidMachineInterstitialCustomEvent.h; sourceTree = "<group>"; };
+		51B9F7A7913339C875BA535F /* Pods-BidMachineSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidMachineSample.release.xcconfig"; path = "Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample.release.xcconfig"; sourceTree = "<group>"; };
+		659EB60523DB2710004F4550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		659EB60623DB2710004F4550 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		659EB60F23DB2710004F4550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		659EB61123DB2713004F4550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		659EB61423DB2713004F4550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		659EB61623DB2713004F4550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659EB61723DB2713004F4550 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		659EB64D23DB2AE9004F4550 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
+		659EB64E23DB2AE9004F4550 /* NativeAdRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdRenderer.h; sourceTree = "<group>"; };
+		659EB64F23DB2AE9004F4550 /* NativeAdRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdRenderer.m; sourceTree = "<group>"; };
+		659EB65023DB2AE9004F4550 /* NativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdView.h; sourceTree = "<group>"; };
+		659EB65123DB2AE9004F4550 /* NativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdView.m; sourceTree = "<group>"; };
+		659EB65623DB2B1E004F4550 /* BaseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseView.xib; sourceTree = "<group>"; };
+		659EB65723DB2B1E004F4550 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		659EB65823DB2B1E004F4550 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
+		659EB65B23DB2B2E004F4550 /* Interstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interstitial.h; sourceTree = "<group>"; };
+		659EB65C23DB2B2E004F4550 /* Rewarded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rewarded.h; sourceTree = "<group>"; };
+		659EB65D23DB2B2E004F4550 /* Rewarded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rewarded.m; sourceTree = "<group>"; };
+		659EB65E23DB2B2E004F4550 /* Interstitial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interstitial.m; sourceTree = "<group>"; };
+		659EB65F23DB2B2F004F4550 /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
+		659EB66023DB2B2F004F4550 /* Native.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Native.m; sourceTree = "<group>"; };
+		659EB66123DB2B2F004F4550 /* Native.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Native.h; sourceTree = "<group>"; };
+		659EB66223DB2B2F004F4550 /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
+		AE2C9432FC7EF31129971C33 /* libPods-BidMachineSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BidMachineSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		659EB5FF23DB2710004F4550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED245850F1584EB0C3FCD866 /* libPods-BidMachineSample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		374B367025E685A4005F1499 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				374B367925E685A4005F1499 /* Utils */,
+				374B367125E685A4005F1499 /* BidMachineNativeAdRenderer.m */,
+				374B367225E685A4005F1499 /* BidMachineNativeAdCustomEvent.m */,
+				374B367325E685A4005F1499 /* BidMachineBannerCustomEvent.h */,
+				374B367425E685A4005F1499 /* BidMachineInstanceMediationSettings.m */,
+				374B367525E685A4005F1499 /* BidMachineInterstitialCustomEvent.m */,
+				374B367625E685A4005F1499 /* BidMachineAdapterConfiguration.m */,
+				374B367725E685A4005F1499 /* BidMachineRewardedVideoCustomEvent.h */,
+				374B367825E685A4005F1499 /* BidMachineNativeAdAdapter.m */,
+				374B368B25E685A4005F1499 /* BidMachineNativeAdRenderer.h */,
+				374B368C25E685A4005F1499 /* BidMachineInstanceMediationSettings.h */,
+				374B368D25E685A4005F1499 /* BidMachineBannerCustomEvent.m */,
+				374B368E25E685A4005F1499 /* BidMachineNativeAdCustomEvent.h */,
+				374B368F25E685A4005F1499 /* BidMachineNativeAdAdapter.h */,
+				374B369025E685A4005F1499 /* BidMachineRewardedVideoCustomEvent.m */,
+				374B369125E685A4005F1499 /* BidMachineAdapterConfiguration.h */,
+				374B369225E685A4005F1499 /* BidMachineInterstitialCustomEvent.h */,
+			);
+			name = Adapter;
+			path = "../BidMachine-IOS-MoPub-Adapter/Adapter";
+			sourceTree = "<group>";
+		};
+		374B367925E685A4005F1499 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				374B367A25E685A4005F1499 /* BMMConstants.h */,
+				374B367B25E685A4005F1499 /* BMMTransformer.m */,
+				374B367C25E685A4005F1499 /* BMMFactory.h */,
+				374B367D25E685A4005F1499 /* BMMFactory+BMRequest.m */,
+				374B367E25E685A4005F1499 /* BMMFetcher.m */,
+				374B367F25E685A4005F1499 /* BMMError.m */,
+				374B368025E685A4005F1499 /* BMMUtils.m */,
+				374B368125E685A4005F1499 /* BMMKeywordsTransformer.h */,
+				374B368225E685A4005F1499 /* BMMFactory+BMTargeting.h */,
+				374B368325E685A4005F1499 /* BMMTransformer.h */,
+				374B368425E685A4005F1499 /* BMMFactory.m */,
+				374B368525E685A4005F1499 /* BMMFactory+BMRequest.h */,
+				374B368625E685A4005F1499 /* BMMFactory+BMTargeting.m */,
+				374B368725E685A4005F1499 /* BMMKeywordsTransformer.m */,
+				374B368825E685A4005F1499 /* BMMUtils.h */,
+				374B368925E685A4005F1499 /* BMMFetcher.h */,
+				374B368A25E685A4005F1499 /* BMMError.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3E0E25F59BD2D8B05D374FDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE2C9432FC7EF31129971C33 /* libPods-BidMachineSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		557BF368B5174F4DD037E36D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1767644863B090BF2B00FC37 /* Pods-BidMachineSample.debug.xcconfig */,
+				51B9F7A7913339C875BA535F /* Pods-BidMachineSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		659EB5F923DB2710004F4550 = {
+			isa = PBXGroup;
+			children = (
+				374B367025E685A4005F1499 /* Adapter */,
+				659EB60423DB2710004F4550 /* BidMachineSample */,
+				374B363825E68461005F1499 /* BidMachineSample.app */,
+				557BF368B5174F4DD037E36D /* Pods */,
+				3E0E25F59BD2D8B05D374FDD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		659EB60423DB2710004F4550 /* BidMachineSample */ = {
+			isa = PBXGroup;
+			children = (
+				659EB60523DB2710004F4550 /* AppDelegate.h */,
+				659EB60623DB2710004F4550 /* AppDelegate.m */,
+				659EB64A23DB2AAB004F4550 /* Presenters */,
+				659EB64B23DB2AB7004F4550 /* AdControllers */,
+				659EB64923DB29C2004F4550 /* ApplicationSupport */,
+			);
+			path = BidMachineSample;
+			sourceTree = "<group>";
+		};
+		659EB64923DB29C2004F4550 /* ApplicationSupport */ = {
+			isa = PBXGroup;
+			children = (
+				659EB60E23DB2710004F4550 /* Main.storyboard */,
+				659EB61123DB2713004F4550 /* Assets.xcassets */,
+				659EB61323DB2713004F4550 /* LaunchScreen.storyboard */,
+				659EB61623DB2713004F4550 /* Info.plist */,
+				659EB61723DB2713004F4550 /* main.m */,
+				374B363925E68462005F1499 /* Empty.swift */,
+			);
+			name = ApplicationSupport;
+			sourceTree = "<group>";
+		};
+		659EB64A23DB2AAB004F4550 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				659EB64E23DB2AE9004F4550 /* NativeAdRenderer.h */,
+				659EB64F23DB2AE9004F4550 /* NativeAdRenderer.m */,
+				659EB65023DB2AE9004F4550 /* NativeAdView.h */,
+				659EB65123DB2AE9004F4550 /* NativeAdView.m */,
+				659EB64D23DB2AE9004F4550 /* NativeAdView.xib */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		659EB64B23DB2AB7004F4550 /* AdControllers */ = {
+			isa = PBXGroup;
+			children = (
+				659EB65523DB2B0D004F4550 /* Base */,
+				659EB66223DB2B2F004F4550 /* Banner.h */,
+				659EB65F23DB2B2F004F4550 /* Banner.m */,
+				659EB65B23DB2B2E004F4550 /* Interstitial.h */,
+				659EB65E23DB2B2E004F4550 /* Interstitial.m */,
+				659EB66123DB2B2F004F4550 /* Native.h */,
+				659EB66023DB2B2F004F4550 /* Native.m */,
+				659EB65C23DB2B2E004F4550 /* Rewarded.h */,
+				659EB65D23DB2B2E004F4550 /* Rewarded.m */,
+			);
+			name = AdControllers;
+			sourceTree = "<group>";
+		};
+		659EB65523DB2B0D004F4550 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				659EB65723DB2B1E004F4550 /* Base.h */,
+				659EB65823DB2B1E004F4550 /* Base.m */,
+				659EB65623DB2B1E004F4550 /* BaseView.xib */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		659EB60123DB2710004F4550 /* BidMachineSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659EB61B23DB2713004F4550 /* Build configuration list for PBXNativeTarget "BidMachineSample" */;
+			buildPhases = (
+				EF9F37FB497C713F2B304BF7 /* [CP] Check Pods Manifest.lock */,
+				659EB5FE23DB2710004F4550 /* Sources */,
+				659EB5FF23DB2710004F4550 /* Frameworks */,
+				659EB60023DB2710004F4550 /* Resources */,
+				AB4356699597363EC996748D /* [CP] Embed Pods Frameworks */,
+				05D24074B104D3A0DB9141AB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BidMachineSample;
+			productName = BMHBIntegrationSample;
+			productReference = 374B363825E68461005F1499 /* BidMachineSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		659EB5FA23DB2710004F4550 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Appodeal;
+				TargetAttributes = {
+					659EB60123DB2710004F4550 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1230;
+					};
+				};
+			};
+			buildConfigurationList = 659EB5FD23DB2710004F4550 /* Build configuration list for PBXProject "BidMachineSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 659EB5F923DB2710004F4550;
+			productRefGroup = 659EB5F923DB2710004F4550;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				659EB60123DB2710004F4550 /* BidMachineSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		659EB60023DB2710004F4550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659EB65223DB2AE9004F4550 /* NativeAdView.xib in Resources */,
+				659EB61523DB2713004F4550 /* LaunchScreen.storyboard in Resources */,
+				659EB65923DB2B1E004F4550 /* BaseView.xib in Resources */,
+				659EB61223DB2713004F4550 /* Assets.xcassets in Resources */,
+				659EB61023DB2710004F4550 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D24074B104D3A0DB9141AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB4356699597363EC996748D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF9F37FB497C713F2B304BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BidMachineSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		659EB5FE23DB2710004F4550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659EB65323DB2AE9004F4550 /* NativeAdRenderer.m in Sources */,
+				659EB66423DB2B2F004F4550 /* Interstitial.m in Sources */,
+				374B369725E685A4005F1499 /* BidMachineAdapterConfiguration.m in Sources */,
+				374B369325E685A4005F1499 /* BidMachineNativeAdRenderer.m in Sources */,
+				374B369925E685A4005F1499 /* BMMTransformer.m in Sources */,
+				659EB65423DB2AE9004F4550 /* NativeAdView.m in Sources */,
+				659EB65A23DB2B1E004F4550 /* Base.m in Sources */,
+				374B36A125E685A4005F1499 /* BidMachineBannerCustomEvent.m in Sources */,
+				374B369C25E685A4005F1499 /* BMMError.m in Sources */,
+				374B369B25E685A4005F1499 /* BMMFetcher.m in Sources */,
+				659EB66523DB2B2F004F4550 /* Banner.m in Sources */,
+				374B369825E685A4005F1499 /* BidMachineNativeAdAdapter.m in Sources */,
+				659EB66323DB2B2F004F4550 /* Rewarded.m in Sources */,
+				374B36A225E685A4005F1499 /* BidMachineRewardedVideoCustomEvent.m in Sources */,
+				374B369525E685A4005F1499 /* BidMachineInstanceMediationSettings.m in Sources */,
+				374B369E25E685A4005F1499 /* BMMFactory.m in Sources */,
+				374B369F25E685A4005F1499 /* BMMFactory+BMTargeting.m in Sources */,
+				374B369D25E685A4005F1499 /* BMMUtils.m in Sources */,
+				659EB60723DB2710004F4550 /* AppDelegate.m in Sources */,
+				374B363A25E68462005F1499 /* Empty.swift in Sources */,
+				374B36A025E685A4005F1499 /* BMMKeywordsTransformer.m in Sources */,
+				659EB66623DB2B2F004F4550 /* Native.m in Sources */,
+				374B369A25E685A4005F1499 /* BMMFactory+BMRequest.m in Sources */,
+				374B369625E685A4005F1499 /* BidMachineInterstitialCustomEvent.m in Sources */,
+				659EB61823DB2713004F4550 /* main.m in Sources */,
+				374B369425E685A4005F1499 /* BidMachineNativeAdCustomEvent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		659EB60E23DB2710004F4550 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				659EB60F23DB2710004F4550 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		659EB61323DB2713004F4550 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				659EB61423DB2713004F4550 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		659EB61923DB2713004F4550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		659EB61A23DB2713004F4550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		659EB61C23DB2713004F4550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1767644863B090BF2B00FC37 /* Pods-BidMachineSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG4VFF78ZM;
+				INFOPLIST_FILE = BidMachineSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bidmachine.sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		659EB61D23DB2713004F4550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B9F7A7913339C875BA535F /* Pods-BidMachineSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG4VFF78ZM;
+				INFOPLIST_FILE = BidMachineSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bidmachine.sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		659EB5FD23DB2710004F4550 /* Build configuration list for PBXProject "BidMachineSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659EB61923DB2713004F4550 /* Debug */,
+				659EB61A23DB2713004F4550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		659EB61B23DB2713004F4550 /* Build configuration list for PBXNativeTarget "BidMachineSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659EB61C23DB2713004F4550 /* Debug */,
+				659EB61D23DB2713004F4550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 659EB5FA23DB2710004F4550 /* Project object */;
+}
