@@ -1,0 +1,4 @@
+[submodule "BidMachine-IOS-MoPub-Adapter"]
+	path = Adapter
+	url = git@github.com:bidmachine/BidMachine-IOS-MoPub-Adapter.git
+	branch = master
