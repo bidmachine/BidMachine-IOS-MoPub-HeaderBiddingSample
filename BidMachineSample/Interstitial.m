@@ -7,11 +7,6 @@
 //
 
 #import "Interstitial.h"
-#import "BMMKeywordsTransformer.h"
-
-#import <mopub-ios-sdk/MoPub.h>
-#import <BidMachine/BidMachine.h>
-
 
 #define UNIT_ID         "ec95ba59890d4fda90a4acf0071ed8b5"
 
@@ -62,8 +57,8 @@
     // After whith call fetcher will has strong ref on request
     NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
     // Extras can be transformer into keywords for line item matching
-    // by use BidMachineKeywordsTransformer
-    BMMKeywordsTransformer *transformer = [BMMKeywordsTransformer new];
+    // by use BDMExternalAdapterKeywordsTransformer
+    BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
     [self loadMoPubAdWithKeywords:keywords extras:extras];
@@ -96,11 +91,11 @@
     NSLog(@"interstitialDidPresentScreen");
 }
 
-- (void)interstitialWillDisappear:(MPInterstitialAdController *)interstitial {
+- (void)interstitialWillDismiss:(MPInterstitialAdController *)interstitial {
     NSLog(@"interstitialWillDismissScreen");
 }
 
-- (void)interstitialDidDisappear:(MPInterstitialAdController *)interstitial {
+- (void)interstitialDidDismiss:(MPInterstitialAdController *)interstitial {
     NSLog(@"interstitialDidDismissScreen");
 }
 

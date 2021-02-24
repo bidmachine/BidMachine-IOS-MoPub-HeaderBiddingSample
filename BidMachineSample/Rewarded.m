@@ -7,15 +7,10 @@
 //
 
 #import "Rewarded.h"
-#import "BMMFetcher.h"
-#import "BMMKeywordsTransformer.h"
-
-#import <mopub-ios-sdk/MoPub.h>
-#import <BidMachine/BidMachine.h>
 
 #define UNIT_ID         "b94009cbb6b7441eb097142f1cb5e642"
 
-@interface Rewarded ()<BDMRequestDelegate, MPRewardedVideoDelegate>
+@interface Rewarded ()<BDMRequestDelegate, MPRewardedAdsDelegate>
 
 @property (nonatomic, strong) BDMRewardedRequest *request;
 
@@ -29,7 +24,7 @@
 }
 
 - (void)showAd:(id)sender {
-    [MPRewardedVideo presentRewardedVideoAdForAdUnitID:@UNIT_ID fromViewController:self withReward:nil];
+    [MPRewardedAds presentRewardedAdForAdUnitID:@UNIT_ID fromViewController:self withReward:nil];
 }
 
 #pragma mark - MoPub
@@ -42,13 +37,13 @@
 /// @param extras extras BidMachine adapter defined extrass
 /// for matching pending request with recieved line item
 - (void)loadMoPubAdWithKeywords:(NSString *)keywords extras:(NSDictionary *)extras {
-    [MPRewardedVideo setDelegate:self forAdUnitId:@UNIT_ID];
-    [MPRewardedVideo loadRewardedVideoAdWithAdUnitID:@UNIT_ID
-                                            keywords:keywords
-                                    userDataKeywords:nil
-                                          customerId:nil
-                                   mediationSettings:nil
-                                         localExtras:extras];
+    [MPRewardedAds setDelegate:self forAdUnitId:@UNIT_ID];
+    [MPRewardedAds loadRewardedAdWithAdUnitID:@UNIT_ID
+                                     keywords:keywords
+                             userDataKeywords:nil
+                                   customerId:nil
+                            mediationSettings:nil
+                                  localExtras:extras];
 }
 
 #pragma mark - BDMRequestDelegate
@@ -58,18 +53,11 @@
     // BidMachineFetcher will capture request by itself
     self.request = nil;
     // Get extras from fetcher
-    // You can fetch request with fetcher (wo presets)
     // After whith call fetcher will has strong ref on request
-    BMMFetcher *rewarded= ({
-        BMMFetcher *fetcher = BMMFetcher.new;
-        fetcher.format = @"0.04";
-        fetcher.roundingMode = kCFNumberFormatterRoundUp;
-        fetcher;
-    });
-    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request fetcher:rewarded];
+    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
     // Extras can be transformer into keywords for line item matching
-    // by use BidMachineKeywordsTransformer
-    BMMKeywordsTransformer *transformer = [BMMKeywordsTransformer new];
+    // by use BDMExternalAdapterKeywordsTransformer
+    BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
     [self loadMoPubAdWithKeywords:keywords extras:extras];
@@ -85,48 +73,51 @@
 
 #pragma mark - MPRewardedVideoDelegate
 
-- (void)rewardedVideoAdDidLoadForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"rewarded:didReceiveAd");
+- (void)rewardedAdDidLoadForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedDidReceiveAd");
 }
 
-- (void)rewardedVideoAdDidFailToLoadForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
+- (void)rewardedAdDidFailToLoadForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
     NSLog(@"rewarded:didFailToReceiveAdWithError: %@", [error localizedDescription]);
 }
 
-- (void)rewardedVideoAdDidExpireForAdUnitID:(NSString *)adUnitID {
+- (void)rewardedAdDidExpireForAdUnitID:(NSString *)adUnitID {
     NSLog(@"rewardedDidExpired");
 }
 
-- (void)rewardedVideoAdDidFailToPlayForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
-    NSLog(@"rewarded:didFailToPlayAdAdWithError: %@", [error localizedDescription]);
+- (void)rewardedAdDidFailToShowForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
+    NSLog(@"rewardedAdDidFailToShowForAdUnitID: %@", [error localizedDescription]);
 }
 
-- (void)rewardedVideoAdWillAppearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"rewarded:WillPresentScreen");
+- (void)rewardedAdWillPresentForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdWillPresentForAdUnitID");
 }
 
-- (void)rewardedVideoAdDidAppearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"rewarded:DidPresentScreen");
+- (void)rewardedAdDidPresentForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidPresentForAdUnitID");
 }
 
-- (void)rewardedVideoAdWillDisappearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"rewarded:WillDismissScreen");
+- (void)rewardedAdWillDismissForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdWillDismissForAdUnitID");
 }
 
-- (void)rewardedVideoAdDidDisappearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"rewarded:DidDismissScreen");
+- (void)rewardedAdDidDismissForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidDismissForAdUnitID");
 }
 
-- (void)rewardedVideoAdDidReceiveTapEventForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"rewarded:DidTrackUserInteraction");
+- (void)rewardedAdDidReceiveTapEventForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidReceiveTapEventForAdUnitID");
 }
 
-- (void)rewardedVideoAdWillLeaveApplicationForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"rewarded:WillWillLeaveApplication");
+- (void)rewardedAdWillLeaveApplicationForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdWillLeaveApplicationForAdUnitID");
 }
 
-- (void)rewardedVideoAdShouldRewardForAdUnitID:(NSString *)adUnitID reward:(MPRewardedVideoReward *)reward {
-    NSLog(@"rewarded: received with currency %@ , amount %lf", reward.currencyType, [reward.amount doubleValue]);
+- (void)rewardedAdShouldRewardForAdUnitID:(NSString *)adUnitID reward:(MPReward *)reward {
+    NSLog(@"Reward received with currency %@ , amount %lf", reward.currencyType, [reward.amount doubleValue]);
 }
 
+- (void)didTrackImpressionWithAdUnitID:(NSString *)adUnitID impressionData:(MPImpressionData *)impressionData {
+    NSLog(@"didTrackImpressionWithAdUnitID");
+}
 @end

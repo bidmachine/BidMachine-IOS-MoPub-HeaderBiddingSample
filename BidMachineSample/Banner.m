@@ -7,10 +7,6 @@
 //
 
 #import "Banner.h"
-#import "BMMKeywordsTransformer.h"
-
-#import <mopub-ios-sdk/MoPub.h>
-#import <BidMachine/BidMachine.h>
 
 #define UNIT_ID         "1832ce06de91424f8f81f9f5c77f7efd"
 
@@ -19,20 +15,10 @@
 @property (nonatomic, strong) MPAdView *bannerView;
 @property (nonatomic, strong) BDMBannerRequest *request;
 @property (weak, nonatomic) IBOutlet UIView *container;
-@property (nonatomic, strong) UIWindow *windowBanner;
 
 @end
 
 @implementation Banner
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.windowBanner = [[UIWindow alloc] initWithFrame:CGRectMake(0, 400, 320, 50)];
-    self.windowBanner.backgroundColor = [UIColor redColor];
-    self.windowBanner.windowLevel = UIWindowLevelAlert + 1;
-    [self.windowBanner setHidden:NO];
-}
 
 - (void)loadAd:(id)sender {
     self.request = [BDMBannerRequest new];
@@ -44,13 +30,13 @@
 }
 
 - (void)addBannerInContainer {
-    [self.windowBanner.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    [self.windowBanner addSubview:self.bannerView];
+    [self.container.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.container addSubview:self.bannerView];
     [NSLayoutConstraint activateConstraints:
         @[
-          [self.bannerView.centerXAnchor constraintEqualToAnchor:self.windowBanner.centerXAnchor],
-          [self.bannerView.centerYAnchor constraintEqualToAnchor:self.windowBanner.centerYAnchor],
-          [self.bannerView.widthAnchor constraintEqualToAnchor:self.windowBanner.widthAnchor],
+          [self.bannerView.centerXAnchor constraintEqualToAnchor:self.container.centerXAnchor],
+          [self.bannerView.centerYAnchor constraintEqualToAnchor:self.container.centerYAnchor],
+          [self.bannerView.widthAnchor constraintEqualToAnchor:self.container.widthAnchor],
           [self.bannerView.heightAnchor constraintEqualToConstant:50]
           ]];
 }
@@ -89,8 +75,8 @@
     // After whith call fetcher will has strong ref on request
     NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
     // Extras can be transformer into keywords for line item matching
-    // by use BidMachineKeywordsTransformer
-    BMMKeywordsTransformer *transformer = [BMMKeywordsTransformer new];
+    // by use BDMExternalAdapterKeywordsTransformer
+    BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
     [self loadMoPubAdWithKeywords:keywords extras:extras];

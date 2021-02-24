@@ -10,10 +10,7 @@
 #import "NativeAdView.h"
 #import "NativeAdRenderer.h"
 #import "BidMachineNativeAdRenderer.h"
-#import "BMMKeywordsTransformer.h"
 
-#import <mopub-ios-sdk/MoPub.h>
-#import <BidMachine/BidMachine.h>
 
 #define UNIT_ID         "7c3f8de23b9d4b7ab45a53ed2c3cb0c8"
 
@@ -84,8 +81,8 @@
     // After whith call fetcher will has strong ref on request
     NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
     // Extras can be transformer into keywords for line item matching
-    // by use BidMachineKeywordsTransformer
-    BMMKeywordsTransformer *transformer = [BMMKeywordsTransformer new];
+    // by use BDMExternalAdapterKeywordsTransformer
+    BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
     [self loadMoPubAdWithKeywords:keywords extras:extras];
