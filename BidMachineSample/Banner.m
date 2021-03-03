@@ -22,6 +22,7 @@
 
 - (void)loadAd:(id)sender {
     self.request = [BDMBannerRequest new];
+    self.request.adSize = BDMBannerAdSize320x50;
     [self.request performWithDelegate:self];
 }
 
@@ -58,6 +59,7 @@
         [self.bannerView removeFromSuperview];
     }
     self.bannerView = [[MPAdView alloc] initWithAdUnitId:@UNIT_ID];
+    self.bannerView.frame = (CGRect){.size = kMPPresetMaxAdSize90Height};
     self.bannerView.translatesAutoresizingMaskIntoConstraints = NO;
     self.bannerView.delegate = self;
     [self.bannerView setLocalExtras:extras];

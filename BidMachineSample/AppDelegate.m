@@ -27,13 +27,8 @@
 
 /// Start BidMachine session, should be called before MoPub initialisation
 - (void)startBidMachine:(void(^)(void))completion {
-    BDMTargeting *targeting = BDMTargeting.new;
-    targeting.storeURL = [NSURL URLWithString:@"http://sampleUrl"];
-    targeting.storeId = @"12345";
-    
     BDMSdkConfiguration *config = [BDMSdkConfiguration new];
-    config.targeting = targeting;
-    
+    config.testMode = YES;
     [BDMSdk.sharedSdk startSessionWithSellerID:@"5"
                                  configuration:config
                                     completion:completion];
