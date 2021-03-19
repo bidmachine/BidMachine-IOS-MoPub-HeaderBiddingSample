@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37159EE125EFACF000361163 /* BDMExternalAdapterRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37159ED625EFACEF00361163 /* BDMExternalAdapterRequestController.m */; };
-		37159EE225EFACF000361163 /* BDMExternalAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 37159ED725EFACEF00361163 /* BDMExternalAdapterConfiguration.m */; };
-		37159EE325EFACF000361163 /* BDMExternalAdapterSDKController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37159ED825EFACEF00361163 /* BDMExternalAdapterSDKController.m */; };
-		37159EE425EFACF000361163 /* BDMExternalAdapterConfigurationDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 37159EDC25EFACF000361163 /* BDMExternalAdapterConfigurationDefines.m */; };
 		37159EE525EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37159EDF25EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.m */; };
 		374B363A25E68462005F1499 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374B363925E68462005F1499 /* Empty.swift */; };
 		374B36E125E6A8FA005F1499 /* BidMachineNativeAdRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 374B36CC25E6A8FA005F1499 /* BidMachineNativeAdRenderer.m */; };
@@ -39,18 +35,8 @@
 
 /* Begin PBXFileReference section */
 		1767644863B090BF2B00FC37 /* Pods-BidMachineSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidMachineSample.debug.xcconfig"; path = "Target Support Files/Pods-BidMachineSample/Pods-BidMachineSample.debug.xcconfig"; sourceTree = "<group>"; };
-		37159ED525EFACEF00361163 /* BDMExternalAdapterRequestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMExternalAdapterRequestController.h; sourceTree = "<group>"; };
-		37159ED625EFACEF00361163 /* BDMExternalAdapterRequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMExternalAdapterRequestController.m; sourceTree = "<group>"; };
-		37159ED725EFACEF00361163 /* BDMExternalAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMExternalAdapterConfiguration.m; sourceTree = "<group>"; };
-		37159ED825EFACEF00361163 /* BDMExternalAdapterSDKController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMExternalAdapterSDKController.m; sourceTree = "<group>"; };
-		37159ED925EFACEF00361163 /* BDMExternalAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMExternalAdapterConfiguration.h; sourceTree = "<group>"; };
-		37159EDA25EFACF000361163 /* BDMExternalAdapterSDKController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMExternalAdapterSDKController.h; sourceTree = "<group>"; };
-		37159EDB25EFACF000361163 /* BDMExternalAdapterConfigurationBuilderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMExternalAdapterConfigurationBuilderProtocol.h; sourceTree = "<group>"; };
-		37159EDC25EFACF000361163 /* BDMExternalAdapterConfigurationDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMExternalAdapterConfigurationDefines.m; sourceTree = "<group>"; };
-		37159EDD25EFACF000361163 /* BDMExternalAdapterConfigurationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMExternalAdapterConfigurationProtocol.h; sourceTree = "<group>"; };
 		37159EDE25EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMExternalAdapterKeywordsTransformer.h; sourceTree = "<group>"; };
 		37159EDF25EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMExternalAdapterKeywordsTransformer.m; sourceTree = "<group>"; };
-		37159EE025EFACF000361163 /* BDMExternalAdapterConfigurationDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMExternalAdapterConfigurationDefines.h; sourceTree = "<group>"; };
 		374B363825E68461005F1499 /* BidMachineSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidMachineSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374B363925E68462005F1499 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		374B36CC25E6A8FA005F1499 /* BidMachineNativeAdRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidMachineNativeAdRenderer.m; sourceTree = "<group>"; };
@@ -109,9 +95,10 @@
 		374B36CB25E6A8FA005F1499 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				374B36D325E6A8FA005F1499 /* Utils */,
 				374B36DF25E6A8FA005F1499 /* BidMachineAdapterConfiguration.h */,
 				374B36D025E6A8FA005F1499 /* BidMachineAdapterConfiguration.m */,
+				37159EDE25EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.h */,
+				37159EDF25EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.m */,
 				374B36EC25E6A960005F1499 /* Banner */,
 				374B36ED25E6A96E005F1499 /* Interstitial */,
 				374B36EE25E6A981005F1499 /* Rewarded */,
@@ -119,25 +106,6 @@
 			);
 			name = Adapter;
 			path = "BidMachine-IOS-MoPub-Adapter/Adapter";
-			sourceTree = "<group>";
-		};
-		374B36D325E6A8FA005F1499 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				37159EE025EFACF000361163 /* BDMExternalAdapterConfigurationDefines.h */,
-				37159EDC25EFACF000361163 /* BDMExternalAdapterConfigurationDefines.m */,
-				37159EDD25EFACF000361163 /* BDMExternalAdapterConfigurationProtocol.h */,
-				37159EDB25EFACF000361163 /* BDMExternalAdapterConfigurationBuilderProtocol.h */,
-				37159ED925EFACEF00361163 /* BDMExternalAdapterConfiguration.h */,
-				37159ED725EFACEF00361163 /* BDMExternalAdapterConfiguration.m */,
-				37159EDA25EFACF000361163 /* BDMExternalAdapterSDKController.h */,
-				37159ED825EFACEF00361163 /* BDMExternalAdapterSDKController.m */,
-				37159ED525EFACEF00361163 /* BDMExternalAdapterRequestController.h */,
-				37159ED625EFACEF00361163 /* BDMExternalAdapterRequestController.m */,
-				37159EDE25EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.h */,
-				37159EDF25EFACF000361163 /* BDMExternalAdapterKeywordsTransformer.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		374B36EC25E6A960005F1499 /* Banner */ = {
@@ -410,11 +378,8 @@
 				659EB66423DB2B2F004F4550 /* Interstitial.m in Sources */,
 				374B36E125E6A8FA005F1499 /* BidMachineNativeAdRenderer.m in Sources */,
 				374B36E925E6A8FA005F1499 /* BidMachineBannerCustomEvent.m in Sources */,
-				37159EE225EFACF000361163 /* BDMExternalAdapterConfiguration.m in Sources */,
 				659EB65423DB2AE9004F4550 /* NativeAdView.m in Sources */,
-				37159EE425EFACF000361163 /* BDMExternalAdapterConfigurationDefines.m in Sources */,
 				659EB65A23DB2B1E004F4550 /* Base.m in Sources */,
-				37159EE125EFACF000361163 /* BDMExternalAdapterRequestController.m in Sources */,
 				374B36EA25E6A8FA005F1499 /* BidMachineRewardedVideoCustomEvent.m in Sources */,
 				659EB66523DB2B2F004F4550 /* Banner.m in Sources */,
 				659EB66323DB2B2F004F4550 /* Rewarded.m in Sources */,
@@ -427,7 +392,6 @@
 				659EB66623DB2B2F004F4550 /* Native.m in Sources */,
 				659EB61823DB2713004F4550 /* main.m in Sources */,
 				374B36E225E6A8FA005F1499 /* BidMachineNativeAdCustomEvent.m in Sources */,
-				37159EE325EFACF000361163 /* BDMExternalAdapterSDKController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
