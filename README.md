@@ -18,7 +18,7 @@
 ```ruby
 target 'Target' do
    project 'Project.xcodeproj'
-  pod 'MoPub-BidMachine-Adapters', '~> 1.6.4'
+   pod 'MoPub-BidMachine-Adapters', '~> 1.7.1.0'
 end
 ```
 
@@ -27,8 +27,16 @@ end
 ```ruby
 target 'Target' do
   project 'Project.xcodeproj'
-  pod 'MoPub-BidMachine-Adapters', '~> 1.6.4'
-  pod "BidMachine/Adapters"
+  pod 'MoPub-BidMachine-Adapters', '~> 1.7.1.0'
+  pod "BDMAdColonyAdapter", "~> 1.7.1.0"
+  pod "BDMAmazonAdapter", "~> 1.7.1.0"
+  pod "BDMAppRollAdapter", "~> 1.7.1.0"
+  pod "BDMCriteoAdapter", "~> 1.7.1.0"
+  pod "BDMFacebookAdapter", "~> 1.7.1.0"
+  pod "BDMMyTargetAdapter", "~> 1.7.1.0"
+  pod "BDMSmaatoAdapter", "~> 1.7.1.0"
+  pod "BDMTapjoyAdapter", "~> 1.7.1.0"
+  pod "BDMVungleAdapter", "~> 1.7.1.0"
 end
 ```
 
@@ -139,8 +147,7 @@ All network required fields and values types are described in BidMachine doc. ([
     config.networkConfigurations = @[[BDMAdNetworkConfiguration buildWithBuilder:^(BDMAdNetworkConfigurationBuilder *builder) {
         builder.appendName(@"criteo");
         builder.appendNetworkClass(NSClassFromString(@"BDMCriteoAdNetwork"));
-        builder.appendInitializationParams(@{@"publisher_id": @"XXX",
-                                             @"banner_ad_units": @[@"XXX"]});
+        builder.appendParams(@{@"publisher_id": @"XXX"});
         builder.appendAdUnit(BDMAdUnitFormatBanner320x50, @{ @"ad_unit_id": @"XXX" }, nil);
     }]];
 
@@ -161,7 +168,7 @@ First you need to create a request and execute it to get the **local extras** an
 
 ```
 
-After polling the request, you need to get the **local extras** and **keywords**
+After polling the request, you need to get the **local extras** and **keywords**. You also need to save the request in BDMRequestStorage.
 
 ```objc
 
@@ -169,13 +176,13 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 - (void)request:(BDMRequest *)request completeWithInfo:(BDMAuctionInfo *)info {
     // After request complete loading application can lost strong ref on it
-    // BidMachineFetcher will capture request by itself
+    // BDMRequestStorage will capture request by itself
     self.request = nil;
-    // Get extras from fetcher
-    // After whith call fetcher will has strong ref on request
-    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
+    // Save current request and use it in mopub auction
+    [BDMRequestStorage.shared saveRequest:request];
+    // Get server rounding price and other fields
+    NSDictionary *extras = request.info.customParams;
     // Extras can be transformer into keywords for line item matching
-    // by use BDMExternalAdapterKeywordsTransformer
     BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
@@ -218,7 +225,7 @@ First you need to create a request and execute it to get the **local extras** an
 
 ```
 
-After polling the request, you need to get the **local extras** and **keywords**
+After polling the request, you need to get the **local extras** and **keywords**. You also need to save the request in BDMRequestStorage.
 
 ```objc
 
@@ -226,13 +233,13 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 - (void)request:(BDMRequest *)request completeWithInfo:(BDMAuctionInfo *)info {
     // After request complete loading application can lost strong ref on it
-    // BidMachineFetcher will capture request by itself
+    // BDMRequestStorage will capture request by itself
     self.request = nil;
-    // Get extras from fetcher
-    // After whith call fetcher will has strong ref on request
-    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
+    // Save current request and use it in mopub auction
+    [BDMRequestStorage.shared saveRequest:request];
+    // Get server rounding price and other fields
+    NSDictionary *extras = request.info.customParams;
     // Extras can be transformer into keywords for line item matching
-    // by use BDMExternalAdapterKeywordsTransformer
     BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
@@ -274,7 +281,7 @@ First you need to create a request and execute it to get the **local extras** an
 
 ```
 
-After polling the request, you need to get the **local extras** and **keywords**
+After polling the request, you need to get the **local extras** and **keywords**. You also need to save the request in BDMRequestStorage.
 
 ```objc
 
@@ -282,13 +289,13 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 - (void)request:(BDMRequest *)request completeWithInfo:(BDMAuctionInfo *)info {
     // After request complete loading application can lost strong ref on it
-    // BidMachineFetcher will capture request by itself
+    // BDMRequestStorage will capture request by itself
     self.request = nil;
-    // Get extras from fetcher
-    // After whith call fetcher will has strong ref on request
-    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
+    // Save current request and use it in mopub auction
+    [BDMRequestStorage.shared saveRequest:request];
+    // Get server rounding price and other fields
+    NSDictionary *extras = request.info.customParams;
     // Extras can be transformer into keywords for line item matching
-    // by use BDMExternalAdapterKeywordsTransformer
     BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
@@ -322,7 +329,7 @@ First you need to create a request and execute it to get the **local extras** an
 
 ```
 
-After polling the request, you need to get the **local extras** and **keywords**
+After polling the request, you need to get the **local extras** and **keywords**. You also need to save the request in BDMRequestStorage.
 
 ```objc
 
@@ -330,13 +337,13 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 - (void)request:(BDMRequest *)request completeWithInfo:(BDMAuctionInfo *)info {
     // After request complete loading application can lost strong ref on it
-    // BidMachineFetcher will capture request by itself
+    // BDMRequestStorage will capture request by itself
     self.request = nil;
-    // Get extras from fetcher
-    // After whith call fetcher will has strong ref on request
-    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
+    // Save current request and use it in mopub auction
+    [BDMRequestStorage.shared saveRequest:request];
+    // Get server rounding price and other fields
+    NSDictionary *extras = request.info.customParams;
     // Extras can be transformer into keywords for line item matching
-    // by use BDMExternalAdapterKeywordsTransformer
     BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
@@ -371,7 +378,7 @@ First you need to create a request and execute it to get the **local extras** an
 
 ```
 
-After polling the request, you need to get the **local extras** and **keywords**
+After polling the request, you need to get the **local extras** and **keywords**. You also need to save the request in BDMRequestStorage.
 
 ```objc
 
@@ -379,13 +386,13 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 - (void)request:(BDMRequest *)request completeWithInfo:(BDMAuctionInfo *)info {
     // After request complete loading application can lost strong ref on it
-    // BidMachineFetcher will capture request by itself
+    // BDMRequestStorage will capture request by itself
     self.request = nil;
-    // Get extras from fetcher
-    // After whith call fetcher will has strong ref on request
-    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
+    // Save current request and use it in mopub auction
+    [BDMRequestStorage.shared saveRequest:request];
+    // Get server rounding price and other fields
+    NSDictionary *extras = request.info.customParams;
     // Extras can be transformer into keywords for line item matching
-    // by use BDMExternalAdapterKeywordsTransformer
     BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded

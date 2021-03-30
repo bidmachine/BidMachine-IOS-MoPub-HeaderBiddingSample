@@ -52,11 +52,11 @@
     // After request complete loading application can lost strong ref on it
     // BidMachineFetcher will capture request by itself
     self.request = nil;
-    // Get extras from fetcher
-    // After whith call fetcher will has strong ref on request
-    NSDictionary *extras = [BDMFetcher.shared fetchParamsFromRequest:request];
+    // Save current request and use it in mopub auction
+    [BDMRequestStorage.shared saveRequest:request];
+    // Get server rounding price and other fields
+    NSDictionary *extras = request.info.customParams;
     // Extras can be transformer into keywords for line item matching
-    // by use BDMExternalAdapterKeywordsTransformer
     BDMExternalAdapterKeywordsTransformer *transformer = [BDMExternalAdapterKeywordsTransformer new];
     NSString *keywords = [transformer transformedValue:extras];
     // Here we define which MoPub ad should be loaded
