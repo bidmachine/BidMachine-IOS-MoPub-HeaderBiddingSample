@@ -83,11 +83,11 @@
     NSLog(@"interstitial:didFailToReceiveAdWithError: %@", [error localizedDescription]);
 }
 
-- (void)interstitialWillAppear:(MPInterstitialAdController *)interstitial {
+- (void)interstitialWillPresent:(MPInterstitialAdController *)interstitial {
     NSLog(@"interstitialWillPresentScreen");
 }
 
-- (void)interstitialDidAppear:(MPInterstitialAdController *)interstitial {
+- (void)interstitialDidPresent:(MPInterstitialAdController *)interstitial {
     NSLog(@"interstitialDidPresentScreen");
 }
 
