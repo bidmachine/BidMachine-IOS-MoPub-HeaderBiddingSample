@@ -38,6 +38,7 @@ target 'Target' do
   pod "BDMSmaatoAdapter", "~> 1.7.3.0"
   pod "BDMTapjoyAdapter", "~> 1.7.3.0"
   pod "BDMVungleAdapter", "~> 1.7.3.0"
+  pod "BDMPangleAdapter", "~> 1.7.3.0"
 end
 ```
 
