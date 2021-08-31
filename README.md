@@ -148,6 +148,7 @@ All network required fields and values types are described in BidMachine doc. ([
 
     config.networkConfigurations = @[[BDMAdNetworkConfiguration buildWithBuilder:^(BDMAdNetworkConfigurationBuilder *builder) {
         builder.appendName(@"criteo");
+        builder.appendTimeout(10);
         builder.appendNetworkClass(NSClassFromString(@"BDMCriteoAdNetwork"));
         builder.appendParams(@{@"publisher_id": @"XXX"});
         builder.appendAdUnit(BDMAdUnitFormatBanner320x50, @{ @"ad_unit_id": @"XXX" }, nil);
