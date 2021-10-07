@@ -194,7 +194,7 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 ```
 
-Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**
+Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**. Local extras should include all fields from BDMRequest.info.customParams and they should not be modified
 
 ```objc
 
@@ -251,7 +251,7 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 ```
 
-Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**
+Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**. Local extras should include all fields from BDMRequest.info.customParams and they should not be modified
 
 ```objc
 
@@ -307,7 +307,7 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 ```
 
-Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**
+Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**. Local extras should include all fields from BDMRequest.info.customParams and they should not be modified
 
 ```objc
 - (void)loadMoPubAdWithKeywords:(NSString *)keywords
@@ -355,7 +355,7 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 ```
 
-Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**
+Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**. Local extras should include all fields from BDMRequest.info.customParams and they should not be modified
 
 ```objc
 - (void)loadMoPubAdWithKeywords:(NSString *)keywords extras:(NSDictionary *)extras {
@@ -404,7 +404,7 @@ After polling the request, you need to get the **local extras** and **keywords**
 
 ```
 
-Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**
+Then you can create an ad mopub object and add settings to it via **local extras** and **keywords**. Local extras should include all fields from BDMRequest.info.customParams and they should not be modified
 
 ```objc
 
