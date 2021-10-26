@@ -19,7 +19,7 @@
 
 target 'Target' do
    project 'Project.xcodeproj'
-   pod 'MoPub-BidMachine-Adapters', '~> 1.7.3.0'
+   pod 'MoPub-BidMachine-Adapters', '~> 1.8.0.0'
 end
 ```
 
@@ -28,16 +28,16 @@ end
 ```ruby
 target 'Target' do
   project 'Project.xcodeproj'
-  pod 'MoPub-BidMachine-Adapters', '~> 1.7.3.0'
-  pod "BDMAdColonyAdapter", "~> 1.7.3.0"
-  pod "BDMAmazonAdapter", "~> 1.7.3.0"
-  pod "BDMCriteoAdapter", "~> 1.7.3.0"
-  pod "BDMFacebookAdapter", "~> 1.7.3.0"
-  pod "BDMMyTargetAdapter", "~> 1.7.3.0"
-  pod "BDMSmaatoAdapter", "~> 1.7.3.0"
-  pod "BDMTapjoyAdapter", "~> 1.7.3.0"
-  pod "BDMVungleAdapter", "~> 1.7.3.0"
-  pod "BDMPangleAdapter", "~> 1.7.3.0"
+  pod 'MoPub-BidMachine-Adapters', '~> 1.8.0.0'
+  pod "BDMAdColonyAdapter", "~> 1.8.0.0"
+  pod "BDMAmazonAdapter", "~> 1.8.0.0"
+  pod "BDMCriteoAdapter", "~> 1.8.0.0"
+  pod "BDMFacebookAdapter", "~> 1.8.0.0"
+  pod "BDMMyTargetAdapter", "~> 1.8.0.0"
+  pod "BDMSmaatoAdapter", "~> 1.8.0.0"
+  pod "BDMTapjoyAdapter", "~> 1.8.0.0"
+  pod "BDMVungleAdapter", "~> 1.8.0.0"
+  pod "BDMPangleAdapter", "~> 1.8.0.0"
 end
 ```
 
